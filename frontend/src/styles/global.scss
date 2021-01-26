@@ -1,0 +1,39 @@
+@import "constants";
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: $COLOR_BACKGROUND;
+  height: 100%;
+
+  font-family: 'Roboto', serif !important;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face{
+  font-family: 'League Spartan Bold';
+  src: url(~src/assets/fonts/LeagueSpartan-Bold.otf),
+  url(~src/assets/fonts/LeagueSpartan-Bold.otf); /* IE */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(~src/assets/fonts/RobotoSlab-VariableFont_wght.ttf),
+  url(~src/assets/fonts/RobotoSlab-VariableFont_wght.ttf); /* IE */
+  font-display: swap;
+}

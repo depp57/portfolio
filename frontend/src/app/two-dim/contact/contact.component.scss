@@ -1,0 +1,134 @@
+@import '~src/styles/constants';
+
+#robot-left {
+  background-image: url(~src/assets/img/robotRedLaser.svg);
+  height: 86px;
+  top: -66px;
+  width: 340px;
+}
+
+#robot-right {
+  background-image: url(~src/assets/img/robotBlueLaser.svg);
+  height: 86px;
+  width: 340px;
+  left: -340px;
+  bottom: -67px;
+}
+
+.robot {
+  width: 50px;
+  position: absolute;
+  z-index: 10;
+}
+
+#main-container {
+  padding: 3% 13%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#contact-container {
+  background-color: $COLOR_SECONDARY;
+  flex-basis: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 2%;
+}
+
+h1 {
+  color: $COLOR_IMPORTANT;
+}
+
+#contact-overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background-color: $COLOR_BACKGROUND;
+  z-index: 100;
+}
+
+.column-robots {
+  position: relative;
+}
+
+.column-right-robot {
+  align-self: flex-end;
+}
+
+#btn-contact-me {
+  text-align: center;
+}
+
+#footer-contact {
+  width: 100%;
+}
+
+#footer-social-container {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid hsla(0, 0, 100%, .2);
+  color: #8e8e8e;
+  font-size: 1.4rem;
+  font-family: 'League Spartan Bold', sans-serif;
+  margin-top: 2%;
+}
+
+#footer-social-container * {
+  transition: color .6s;
+}
+
+#footer-social-link-container {
+  margin: auto 0;
+}
+
+#footer-social-link-container > * {
+  margin-left: 5px;
+}
+
+.js-footer-social-hover:hover, .is-hovered {
+  color: $COLOR_IMPORTANT;
+}
+
+.footer-social-link::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: $COLOR_IMPORTANT;
+  transform-origin: right bottom;
+  transform: scaleX(0);
+  transition: transform 0.3s linear;
+}
+
+.footer-social-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left bottom;
+}
+
+.relativePosition {
+  position: relative;
+}
+
+::ng-deep .p-editor-container {
+  position: relative;
+}
+
+#inputForm {
+  height: 100%;
+  padding: 3% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#inputName, #inputEmail {
+  width: 16em;
+}

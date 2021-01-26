@@ -1,0 +1,14 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+article {
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  padding: 40px;
+  box-shadow: 1px 1px 100px 10px rgba(0, 0, 0, 0.8);
+}

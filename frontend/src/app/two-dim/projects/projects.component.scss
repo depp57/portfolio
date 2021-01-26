@@ -1,0 +1,56 @@
+#searchInput {
+  width: 17em;
+}
+
+::ng-deep .p-dataview-header {
+  text-align: center;
+}
+
+::ng-deep .p-dataview-content {
+  background-color: inherit !important;
+}
+
+::ng-deep .p-grid {
+  justify-content: space-around;
+}
+
+::ng-deep .p-card-header {
+  text-align: center;
+}
+
+::ng-deep .p-card-header img {
+  width: unset !important;
+}
+
+::ng-deep .p-card-content {
+  overflow-wrap: break-word;
+}
+
+::ng-deep .p-card-body {
+  height: 100%;
+}
+
+::ng-deep .p-card {
+  margin: 5% 1.5% 0 1.5%;
+  height: 28em;
+}
+
+.technologies {
+  display: flex;
+  height: 2.5em;
+  margin: 3% 0;
+}
+
+.technologies>img {
+  max-height: 100%;
+  margin: 0 1.5%;
+}
+
+::ng-deep .p-card-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+::ng-deep .p-dataview-footer {
+  display: none;
+}

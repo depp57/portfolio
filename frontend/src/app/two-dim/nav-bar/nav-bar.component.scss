@@ -1,0 +1,24 @@
+@import '~src/styles/constants';
+
+#navContainer {
+  display: flex;
+  height: 100%;
+  background-color: $COLOR_IMPORTANT;
+}
+
+#navButtonsColumn {
+  display: flex;
+  flex: 75%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#navRobotColumn {
+  padding: 4%;
+}
+
+#navRobot {
+  background-image: url(~src/assets/img/robotRed.svg);
+  width: 50px;
+  height: 87px;
+}

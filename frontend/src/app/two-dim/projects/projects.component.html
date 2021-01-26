@@ -1,0 +1,32 @@
+<p-dataView #dv [value]="projects" layout="grid" filterBy="techsFlatted,name">
+  <p-header>
+    <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input id="searchInput" type="search" pInputText placeholder="Search by keyword (Java...)"
+           (input)='dv.filter(getInputText($event), "contains")'>
+    </span>
+  </p-header>
+
+  <ng-template let-project pTemplate="gridItem">
+    <div class="p-col-12 p-md-6 p-lg-4">
+
+      <p-card [header]="project.name" styleClass="p-card-shadow">
+        <p-header>
+          <img [alt]="project.name" src="assets/img/projects/{{project.name}}.png">
+        </p-header>
+
+        <div class="technologies">
+          <img *ngFor="let technology of project.technologies" src="assets/img/projects/{{technology}}.svg" [alt]="technology"/>
+        </div>
+
+        <p>{{project.description}}</p>
+
+        <p-footer>
+          <p-button label="Show more information" icon="pi pi-check"></p-button>
+          <p-button *ngIf="project.isOnline" label="Go to it !?" icon="pi pi-check"></p-button>
+        </p-footer>
+      </p-card>
+
+    </div>
+  </ng-template>
+</p-dataView>

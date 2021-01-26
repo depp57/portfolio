@@ -1,0 +1,41 @@
+@import '~src/styles/constants';
+
+$mainPadding: 8px;
+
+#mainContainer {
+  display: flex;
+  height: 100%;
+  padding: $mainPadding;
+}
+
+#page {
+  width: 100%;
+}
+
+#navbar {
+  position: fixed;
+  height: calc(100% - 2 * #{$mainPadding});
+}
+
+::ng-deep .p-component {
+  font-family: 'Roboto', serif !important;
+}
+
+// Responsive
+@mixin responsiveVariables($navbarWidth: 11%) {
+  #page {
+    margin-left: $navbarWidth+1;
+  }
+
+  #navbar {
+    width: $navbarWidth;
+  }
+}
+
+@include responsiveVariables();
+
+@media #{$LAPTOP} {
+  @include responsiveVariables(13%);
+}
+
+// TODO tablette et smartphone avec menu déroulant mais pareil dans l'idée ! (robot js)

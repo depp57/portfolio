@@ -1,0 +1,58 @@
+@import '~src/styles/constants';
+
+#name {
+  text-align: center;
+  color: $COLOR_IMPORTANT;
+  font-size: 110px;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+#letter {
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+
+  height: 60px;
+  width: 54px;
+  border: 6px solid $COLOR_IMPORTANT;
+  border-radius: 60px;
+  animation: letter 3.5s ease-in-out forwards;
+}
+
+@keyframes letter {
+  0%,30%{ width: 54px; }
+  70%,100%{ width: 30vw; }
+}
+
+#name-carousel {
+  overflow: hidden;
+  position: relative;
+  height: 65px;
+  padding-top: 10px;
+  margin-top: -10px;
+  box-sizing: content-box;
+}
+
+#name-carousel li {
+  height: 45px;
+  margin-bottom: 45px;
+  display: block;
+}
+
+#name-carousel-flip-3 {
+  animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flip3 {
+  0% { margin-top: -270px; }
+  5% { margin-top: -180px; }
+  33% { margin-top: -180px; }
+  38% { margin-top: -90px; }
+  66% { margin-top: -90px; }
+  71% { margin-top: 0; }
+  99.99% { margin-top: 0; }
+  100% { margin-top: -270px; }
+}

@@ -1,0 +1,30 @@
+@import '~src/styles/constants';
+
+::ng-deep pdf-viewer > div {
+  overflow-x: inherit !important;
+}
+
+#downloadCV {
+  position: fixed;
+  width: 4vw;
+  height: 4vw;
+  bottom: 4vh;
+  right: 4vw;
+  background-color: $COLOR_IMPORTANT;
+  color: #FFF;
+  border-radius: 4em;
+  text-align: center;
+
+  transition: transform .3s linear;
+  transform: scale(1);
+}
+
+#downloadCV:hover {
+  box-shadow: 0 6px 14px 0 #333;
+  transform: scale(1.05);
+}
+
+#downloadCV > span {
+  line-height: 3vw;
+  font-size: 2.5vw;
+}

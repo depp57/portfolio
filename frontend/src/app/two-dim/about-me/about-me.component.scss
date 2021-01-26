@@ -1,0 +1,35 @@
+@import '~src/styles/constants';
+
+#about-me, #soft-skills {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+
+  color: $COLOR_TERTIARY;
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+h1 {
+  text-align: center;
+}
+
+#video-pitch {
+  margin: 3% 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+#video-pitch iframe {
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+#soft-skills {
+  margin-top: -25%;
+}

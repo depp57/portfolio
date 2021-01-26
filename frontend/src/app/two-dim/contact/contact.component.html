@@ -1,0 +1,86 @@
+<div id="main-container">
+
+  <div class="column-robots">
+    <div id="robot-left" class="robot"></div>
+  </div>
+
+  <div id="contact-container">
+    <div id="contact-overlay"></div>
+
+    <h1>Get in touch</h1>
+
+    <form id="inputForm" (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <span class="p-float-label p-d-flex">
+        <input type="text" id="inputName" pInputText
+               ngModel name="name" required minlength="3" maxlength="30">
+        <label for="inputName">Full name</label>
+      </span>
+
+      <span class="p-float-label p-d-flex">
+        <input type="email" id="inputEmail" pInputText
+               ngModel name="email" required pattern="^.+@.+\..{2,}" maxlength="30">
+        <label for="inputEmail">Email address</label>
+      </span>
+
+      <p-editor [style]="{'height':'25vh'}" ngModel name="message" required>
+        <p-header>
+          <span class="ql-formats">
+            <select class="ql-header" tabindex="-1">
+              <option value="1" tabindex="-1">Heading</option>
+              <option value="2" tabindex="-1">Subheading</option>
+              <option selected tabindex="-1">Normal</option>
+            </select>
+            <select class="ql-font" tabindex="-1">
+              <option selected tabindex="-1">Sans Serif</option>
+              <option value="serif" tabindex="-1">Serif</option>
+              <option value="monospace" tabindex="-1">Monospace</option>
+            </select>
+          </span>
+
+          <span class="ql-formats">
+            <button class="ql-bold" aria-label="Bold" tabindex="-1"></button>
+            <button class="ql-italic" aria-label="Italic" tabindex="-1"></button>
+            <button class="ql-underline" aria-label="Underline" tabindex="-1"></button>
+          </span>
+
+          <span class="ql-formats">
+            <select class="ql-color" tabindex="-1"></select>
+            <select class="ql-background" tabindex="-1"></select>
+          </span>
+
+          <span class="ql-formats">
+            <button class="ql-list" value="ordered" aria-label="Ordered List" tabindex="-1"></button>
+            <button class="ql-list" value="bullet" aria-label="Unordered List" tabindex="-1"></button>
+          </span>
+
+          <span class="ql-formats">
+            <button class="ql-link" aria-label="Insert Link" tabindex="-1"></button>
+            <button class="ql-code-block" aria-label="Insert Code Block" tabindex="-1"></button>
+          </span>
+        </p-header>
+      </p-editor>
+
+      <button id="btn-contact-me" pButton pRipple type="submit" label="Submit" [disabled]="form.invalid"></button>
+    </form>
+
+    <div id="footer-contact">
+      <div id="footer-social-container">
+        <p id="footer-social-text">Look at my social profiles ☞</p>
+
+        <div id="footer-social-link-container">
+          <a href="https://www.linkedin.com/in/sacha-thommet/" class="footer-social-link js-footer-social-hover">LinkedIn</a>
+          <span class="js-footer-social-hover">·</span>
+          <a href="https://github.com/depp57" class="footer-social-link js-footer-social-hover">Github</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="column-robots column-right-robot">
+    <div id="robot-right" class="robot"></div>
+  </div>
+
+</div>
+
+<p-toast position="bottom-center"></p-toast>
